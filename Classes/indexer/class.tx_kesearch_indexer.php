@@ -785,6 +785,9 @@ class tx_kesearch_indexer
         if (count($additionalFields)) {
             $fieldsValues = array_merge($fieldsValues, $additionalFields);
         }
+        if($fieldsValues['orig_pid']==""){
+            $fieldsValues['orig_pid'] = 0;
+        }
 
         // full quoting record. Average speed: 0-1ms
         $fieldsValues = $GLOBALS['TYPO3_DB']->fullQuoteArray($fieldsValues, 'tx_kesearch_index');
