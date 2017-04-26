@@ -278,7 +278,7 @@ class tx_kesearch_indexer_types
                     false
                 );
 
-                $messages[] = $message->render();
+                $messages[] = $message->getMessage();
             }
 
             return implode('<br>', $messages);
